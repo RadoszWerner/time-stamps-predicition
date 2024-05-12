@@ -6,9 +6,9 @@ import numpy as np
 import math
 import random
 
-def create_subsets():
+class create_subsets():
     def __init__(self):
-        return self
+        pass
     
     def create_random_subsets(self, data, num_subsets=40, window_size=10):
         subsets = []
@@ -20,7 +20,7 @@ def create_subsets():
         return subsets
     
     # Creating table of 10-day datasets
-    def create_dataset_table(subsets):
+    def create_dataset_table(self, subsets):
         dataset_ids = []
         dates_list = []
         close_values_list = []
@@ -43,7 +43,7 @@ def create_subsets():
         return table
     
     # Adding label collumn containing information about rise/ fall
-    def add_label_column(table):
+    def add_label_column(self, table):
         for index, row in table.iterrows():
             close_day_7 = row['close_values'][6]
             close_day_10 = row['close_values'][9]
